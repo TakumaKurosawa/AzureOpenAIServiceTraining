@@ -1,2 +1,4 @@
 openai==1.30.3
 autoflake==2.3.1
+streamlit==1.35.0
+st-pages==0.4.5

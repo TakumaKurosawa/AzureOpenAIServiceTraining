@@ -9,7 +9,7 @@ dep/install: ## install python dependencies ## make dep/install
 ##### RUN APP #####
 .PHONY: run/app
 run/app: ## run python app ## make run/app
-	python main.py
+	streamlit run main.py
 
 ##### HELP #####
 
