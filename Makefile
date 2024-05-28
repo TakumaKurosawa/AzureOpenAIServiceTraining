@@ -6,6 +6,11 @@
 dep/install: ## install python dependencies ## make dep/install
 	pip install -r requirements.txt --user
 
+##### RUN APP #####
+.PHONY: run/app
+run/app: ## run python app ## make run/app
+	python main.py
+
 ##### HELP #####
 
 .PHONY: help
