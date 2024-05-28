@@ -1,0 +1,11 @@
+pre-commit:
+  commands:
+    format:
+      run: lefthook run format
+
+format:
+  parallel: true
+  commands:
+    autoflake:
+      glob: "*.py"
+      run: autoflake --recursive --ignore-init-module-imports --remove-all-unused-imports --remove-unused-variables --in-place {staged_files}
