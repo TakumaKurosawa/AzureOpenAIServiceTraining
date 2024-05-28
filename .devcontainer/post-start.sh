@@ -3,7 +3,7 @@
 echo "Running post-start.sh"
 
 echo "Installing python dependencies..."
-make dep/ai
+make dep/install
 
 echo "Lefthook setup..."
 lefthook install
