@@ -2,9 +2,9 @@
 
 ##### PREPARE APP #####
 
-.PHONY: dep/ai
-dep/ai: ## install python dependencies ## make dep/ai
-	cd ai && pip install -r requirements.txt --user
+.PHONY: dep/install
+dep/install: ## install python dependencies ## make dep/install
+	pip install -r requirements.txt --user
 
 ##### HELP #####
 
