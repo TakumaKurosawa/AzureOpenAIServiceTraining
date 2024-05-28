@@ -1,0 +1,56 @@
+{
+    "name": "Dev",
+    "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+    "hostRequirements": {
+        "cpus": 2
+    },
+    // https://containers.dev/features
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "installTools": true,
+            "version": "3.12"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "1.2.0"
+        },
+        "ghcr.io/devcontainers-contrib/features/poetry:2": {
+            "version": "1.7.1"
+        },
+        "ghcr.io/devcontainers-contrib/features/lefthook-asdf:1": {
+            "version": "1.6.7"
+        }
+    },
+    "runArgs": [
+        "--device=/dev/net/tun"
+    ],
+    "forwardPorts": [
+        8080
+    ],
+    "postStartCommand": "sh .devcontainer/post-start.sh",
+    "customizations": {
+        "codespaces": {
+            "openFiles": []
+        },
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "GitHub.copilot",
+                "ms-python.black-formatter",
+                "ms-python.pylint",
+                "ms-python.isort",
+                "shardulm94.trailing-spaces",
+                "ms-vscode.makefile-tools",
+                "mikoz.autoflake-extension",
+                "eamodio.gitlens"
+            ],
+            "settings": {
+                "[python]": {
+                    "editor.formatOnSave": true,
+                    "editor.defaultFormatter": "ms-python.black-formatter"
+                },
+                "terminal.integrated.shell.linux": "zsh",
+                "terminal.integrated.defaultProfile.linux": "zsh"
+            }
+        }
+    }
+}
