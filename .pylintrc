@@ -1,0 +1,10 @@
+[MESSAGES CONTROL]
+
+disable=missing-docstring,
+        too-few-public-methods,
+        line-too-long,
+        too-many-arguments,
+        unused-argument,
+        fixme,
+        invalid-name,
+        no-name-in-module,
