@@ -2,3 +2,8 @@
 path = "main.py"
 name = "Home"
 icon = "🏠"
+
+[[pages]]
+path = "dall_e_2.py"
+name = "Image generation"
+icon = "📸"
